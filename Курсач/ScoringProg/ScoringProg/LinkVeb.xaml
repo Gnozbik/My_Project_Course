@@ -1,0 +1,16 @@
+﻿<Window x:Class="ScoringProg.LinkVeb"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScoringProg"
+        mc:Ignorable="d"
+        Title="LinkVeb" Height="450" Width="800">
+    <Grid Loaded="Grid_Loaded">
+        <Label x:Name="label" Background="#B6EA82" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Проверка на кредитный скоринг" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,29,0,0" Width="580" Height="43"/>
+        <Button x:Name="bt_back" Background="#B6EA82" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="38,362,0,0" Click="bt_exit_Click"/>
+        <Button x:Name="bt_otp" Background="#B6EA82" Content="Отправить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="347,309,0,0" Height="29" Click="bt_otp_Click" Loaded="bt_otp_Loaded"/>
+        <TextBox x:Name="textBoxInf" Background="Silver" HorizontalAlignment="Left" Height="199" TextWrapping="Wrap" VerticalAlignment="Top" Width="597" Margin="97,105,0,0"/>
+
+    </Grid>
+</Window>

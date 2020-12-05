@@ -1,0 +1,134 @@
+﻿<Page x:Class="ScoringProg.Pages.Anketirovanie"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:local="clr-namespace:ScoringProg.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserGlavEcran">
+
+    <Grid>
+        <Label x:Name="label" Style="{StaticResource RoundLabelTemplate}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Анкетирование" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,29,0,0" Width="580" Height="43"/>
+        <Label x:Name="label1" Content="Введите данные" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,77,0,0"/>
+        <Label x:Name="label2" Content="Фамилия:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,114,0,0"/>
+        <Label x:Name="label3" Content="Имя:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="50,145,0,0"/>
+        <Label x:Name="label4" Content="Отчество:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,176,0,0"/>
+        <Label x:Name="label5" Content="Дата рождения:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,207,0,0"/>
+        <Label x:Name="label6" Content="Пол" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="54,238,0,0"/>
+        <Label x:Name="label7" Content="Серия номер паспорта:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,269,0,0"/>
+        <Label x:Name="label8" Content="Телефон" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="41,310,0,0"/>
+        <RadioButton x:Name="RB_M" Content="М:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="186,247,0,0"/>
+        <RadioButton x:Name="RB_G" Content="Ж:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="130,247,0,0"/>
+        <TextBox x:Name="TB_surname" Style="{StaticResource RoundTextBoxTemplate}"  HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="130,114,0,0"/>
+        <TextBox x:Name="TB_patronymic"  Style="{StaticResource RoundTextBoxTemplate}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="130,176,0,0"/>
+        <xctk:MaskedTextBox x:Name="TB_BirthDay"  Style="{StaticResource RoundTextBoxTemplate}" HorizontalContentAlignment="Left" Mask="99/99/9999" HorizontalAlignment="Left" Height="23" Margin="143,207,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TB_name"  Style="{StaticResource RoundTextBoxTemplate}" HorizontalAlignment="Left" Height="22" Margin="130,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <xctk:MaskedTextBox x:Name="TB_serialnomerpassport"  Style="{StaticResource RoundTextBoxTemplate}" HorizontalContentAlignment="Left" Mask="9999-999999" HorizontalAlignment="Left" Height="23" Margin="164,272,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <xctk:MaskedTextBox x:Name="TB_phone"  Style="{StaticResource RoundTextBoxTemplate}" Mask="+7(999)999-99-99" HorizontalAlignment="Left" Height="23" Margin="114,313,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <ScrollViewer HorizontalAlignment="Left" Height="287" VerticalAlignment="Top" Width="215" Margin="423,111,0,0">
+            <Grid Height="595" Width="182">
+                <Label x:Name="LB_v1" Content="Семейное положение" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ComboBox x:Name="CB_v1"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Height="25" Margin="6,26,0,0">
+                    <ComboBoxItem>Не замужем, не женат</ComboBoxItem>
+                    <ComboBoxItem>Замужем, женат</ComboBoxItem>
+                    <ComboBoxItem>Разведён, разведена</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v2" Content="Наличие детей, иждивенцев" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,54,0,0"/>
+                <ComboBox x:Name="CB_v2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,85,0,0">
+                    <ComboBoxItem>Нет детей</ComboBoxItem>
+                    <ComboBoxItem>1-2 Ребенка</ComboBoxItem>
+                    <ComboBoxItem>3-4 Ребенка</ComboBoxItem>
+                    <ComboBoxItem>5-6 Ребенка</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v3" Content="Дополнительный доход:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,112,0,0"/>
+                <ComboBox x:Name="CB_v3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,136,0,0">
+                    <ComboBoxItem>меньше 10000 руб</ComboBoxItem>
+                    <ComboBoxItem>больше 10000 руб но меньше 20000 руб</ComboBoxItem>
+                    <ComboBoxItem>больше 20000 руб но меньше 40000 руб</ComboBoxItem>
+                    <ComboBoxItem>больше 40000 руб но меньше 60000 руб</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+
+                <Label x:Name="LB_v4" Content="Трудоустройство:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,163,0,0"/>
+                <ComboBox x:Name="CB_v4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,189,0,0">
+                    <ComboBoxItem>Работаю в государственной компании</ComboBoxItem>
+                    <ComboBoxItem>Работаю в коммерческой компании</ComboBoxItem>
+                    <ComboBoxItem>Учусь</ComboBoxItem>
+                    <ComboBoxItem>Не работаю</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v5" Content="Трудовой стаж:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,221,0,0"/>
+                <ComboBox x:Name="CB_v5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,247,0,0">
+                    <ComboBoxItem>1-4 месяца</ComboBoxItem>
+                    <ComboBoxItem>4-8 месяцев</ComboBoxItem>
+                    <ComboBoxItem>1-2 года</ComboBoxItem>
+                    <ComboBoxItem>больше 2 лет</ComboBoxItem>
+                    <ComboBoxItem>Нет трудового стажа</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v6" Content="Квалификация и должность:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,283,0,0"/>
+                <ComboBox x:Name="CB_v6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,309,0,0">
+                    <ComboBoxItem>Директор</ComboBoxItem>
+                    <ComboBoxItem>Бухгалтер</ComboBoxItem>
+                    <ComboBoxItem>Водитель</ComboBoxItem>
+                    <ComboBoxItem>Доктор</ComboBoxItem>
+                    <ComboBoxItem>Студент</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v7" Content="Уровень заработной платы:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,342,0,0"/>
+                <ComboBox x:Name="CB_v7" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,368,0,0">
+                    <ComboBoxItem>меньше 5000 руб</ComboBoxItem>
+                    <ComboBoxItem>меньше 10000 руб</ComboBoxItem>
+                    <ComboBoxItem>больше 10000 руб но меньше 20000 руб</ComboBoxItem>
+                    <ComboBoxItem>больше 20000 руб но меньше 40000 руб</ComboBoxItem>
+                    <ComboBoxItem>больше 40000 руб но меньше 60000 руб</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v8" Content="Кредитная нагрузка:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,406,0,0"/>
+                <ComboBox x:Name="CB_v8" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,432,0,0">
+                    <ComboBoxItem>Есть кредит</ComboBoxItem>
+                    <ComboBoxItem>Нет кредита</ComboBoxItem>
+                    <ComboBoxItem>Есть заем(не кредит)</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v9" Content="Уровень образования:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,465,0,0"/>
+                <ComboBox x:Name="CB_v9" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,491,0,0">
+                    <ComboBoxItem>Высшее образование</ComboBoxItem>
+                    <ComboBoxItem>Среднее профессиональное образование</ComboBoxItem>
+                    <ComboBoxItem>Полное среднее образование</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+                <Label x:Name="LB_v10" Content="Наличие в собственности:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,530,0,0"/>
+                <ComboBox x:Name="CB_v10" HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" Margin="6,556,0,0">
+                    <ComboBoxItem>Дом</ComboBoxItem>
+                    <ComboBoxItem>Квартира</ComboBoxItem>
+                    <ComboBoxItem>Гараж</ComboBoxItem>
+                    <ComboBoxItem>Машина</ComboBoxItem>
+                    <!--<ComboBoxItem>Другое</ComboBoxItem>-->
+                </ComboBox>
+
+            </Grid>
+        </ScrollViewer>
+        <Button x:Name="bt_back" Style="{StaticResource RoundButtonTemplate}" Height="20" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="38,362,0,0" Click="bt_back_Click"/>
+        <Button x:Name="bt_go" Style="{StaticResource RoundButtonTemplate}" Height="20" Content="Далее" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="164,362,0,0" Click="bt_go_Click"/>
+
+
+
+
+    </Grid>
+</Page>

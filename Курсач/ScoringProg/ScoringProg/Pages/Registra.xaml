@@ -1,0 +1,27 @@
+﻿<Page x:Class="ScoringProg.Pages.Registra"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ScoringProg.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Registra">
+
+    <Grid>
+        <Label x:Name="label" Background="#B6EA82" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Регистрация" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,29,0,0" Width="580" Height="43"/>
+        <Button x:Name="bt_back" Background="#B6EA82" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="38,362,0,0" Click="bt_exit_Click"/>
+        <Button x:Name="bt_Zareg" Background="#B6EA82" Content="Зарегестрироваться" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="629,363,0,0" Height="29"  Click="bt_Zareg_Click"/>
+        <TextBox x:Name="textBox_Surname" Background="#E8E8E8" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Margin="351,122,0,0"/>
+        <TextBox x:Name="textBox_Name" Background="#E8E8E8" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Margin="351,164,0,0"/>
+        <Label x:Name="label1_Copy" Content="Имя:" Margin="182,152,0,0" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left"/>
+        <TextBox x:Name="textBox_login" Background="#E8E8E8" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Margin="351,206,0,0"/>
+        <Label x:Name="label1_Copy1" Content="Логин:" Margin="182,194,0,0" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left" AutomationProperties.IsOffscreenBehavior="Onscreen"/>
+        <TextBox x:Name="textBox_Passw" Background="#E8E8E8" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Margin="351,248,0,0"/>
+        <Label x:Name="label1_Copy2" Content="Пароль:" Margin="182,236,0,0" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left"/>
+        <TextBox x:Name="textBox_Passw_Copy" Background="#E8E8E8" HorizontalAlignment="Left" Height="24" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="206" Margin="351,290,0,0"/>
+        <Label x:Name="label1_Copy3" Content="Повтор пароля:" Margin="182,278,0,0" VerticalAlignment="Top" FontSize="20" HorizontalAlignment="Left"/>
+        <Label x:Name="label2" Content="Фамилия:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="182,115,0,0" FontSize="20" Height="37" Width="101"/>
+
+    </Grid>
+</Page>

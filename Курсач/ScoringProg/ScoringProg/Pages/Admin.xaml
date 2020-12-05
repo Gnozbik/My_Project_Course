@@ -1,0 +1,19 @@
+﻿<Page x:Class="ScoringProg.Pages.Admin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ScoringProg.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Admin">
+
+    <Grid>
+        <Label x:Name="label" Style="{StaticResource RoundLabelTemplate}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Главный экран" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,29,0,0" Width="580" Height="43"/>
+        <Button x:Name="bt_back" Style="{StaticResource RoundButtonTemplate}" Height="20" Content="Выйти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="38,362,0,0" Click="bt_exit_Click"/>
+        <!--<Button x:Name="bt_ProvVopr" Style="{StaticResource RoundButtonTemplate}" Content="Проверка вопросов" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="340,128,0,0" Height="30" />-->
+        <Button x:Name="bt_ProcmotrDogov" Style="{StaticResource RoundButtonTemplate}" Content="Просмотр договоров" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="340,226,0,0" Height="30" Click="bt_ProcmotrDogov_Click" />
+        <Button x:Name="bt_ProverkaZaivky" Style="{StaticResource RoundButtonTemplate}" Content="Проверка заявки" HorizontalAlignment="Left" VerticalAlignment="Top" Width="125" Margin="340,178,0,0" Height="30" Click="bt_ProverkaZaivky_Click"  />
+
+    </Grid>
+</Page>

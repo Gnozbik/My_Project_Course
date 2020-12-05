@@ -1,0 +1,66 @@
+﻿<Page x:Class="ScoringProg.Pages.VibKredit"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ScoringProg.Pages"
+      xmlns:sys="clr-namespace:System;assembly=mscorlib"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="VibKredit">
+
+    <Grid >
+        <Label x:Name="label"  Style="{StaticResource RoundLabelTemplate}" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="Выбор кредита" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="114,29,0,0" Width="580" Height="43"/>
+        <Label x:Name="label1" Content="Введите данные" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="357,77,0,0"/>
+        <Label x:Name="label1_Copy" Content="Сумма (в руб):" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,121,0,0"/>
+        <Label x:Name="label1_Copy1" Content="Колво месяцев:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,152,0,0"/>
+        <Label x:Name="label1_Copy2" Content="Выберите тип платежей:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="53,183,0,0"/>
+        <RadioButton x:Name="RB_Annuitet" Content="Аннуитетные" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,214,0,0"/>
+        <RadioButton x:Name="RB_Differen" Content="Дифференцированные" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,237,0,0"/>
+        <Label x:Name="Lb_GodPocent" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="57,282,0,0"/>
+        <TextBox x:Name="TB_kolmec" Style="{StaticResource RoundTextBoxTemplate}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="158,152,0,0"/>
+        <TextBox x:Name="TB_Summa" Style="{StaticResource RoundTextBoxTemplate}" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Margin="158,121,0,0"/>
+        <Button x:Name="bt_back" Style="{StaticResource RoundButtonTemplate}" Height="20" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="40,378,0,0" Click="bt_back_Click"/>
+        <Button x:Name="bt_Otpr" Style="{StaticResource RoundButtonTemplate}" Height="30" Content="Отправить" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="684,378,0,0" Click="bt_Otpr_Click" />
+        <Button x:Name="bt_Racchit" Style="{StaticResource RoundButtonTemplate}" Height="30" Content="Рассчитать" HorizontalAlignment="Left" VerticalAlignment="Top" Width="76" Margin="556,378,0,0" Click="bt_Racchit_Click" />
+
+
+        <ListBox x:Name="LB_vidKred" HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Width="196" Margin="298,121,0,0">
+            <sys:String>Срочный</sys:String>
+            <sys:String>Ремонт</sys:String>
+            <sys:String>Покупка нового автомобиля</sys:String>
+            <sys:String>Погашение кредитов</sys:String>
+            <sys:String>Учеба</sys:String>
+            <sys:String>Развите бизнеса</sys:String>
+            <sys:String>Лечение</sys:String>
+            <sys:String>Погашение долгов (не кредит)</sys:String>
+            <sys:String>Шоппинг</sys:String>
+            <sys:String>Путешествие</sys:String>
+            <sys:String>Торжество</sys:String>
+
+
+            <!--<Label x:Name="button" Content="Срочный" Width="208"/>
+            <Label x:Name="button_Copy" Content="Ремонт" Width="208"/>
+            <Label x:Name="button_Copy1" Content="Покупка нового автомобиля" Width="208"/>
+            <Label x:Name="button_Copy2" Content="Покупка подержанного автомобиля" Width="211"/>
+            <Label x:Name="button_Copy3" Content="Погашение кредитов" Width="208"/>
+            <Label x:Name="button_Copy4" Content="Учеба" Width="208"/>
+            <Label x:Name="button_Copy5" Content="Развите бизнеса" Width="208"/>
+            <Label x:Name="button_Copy6" Content="Лечение" Width="208"/>
+            <Label x:Name="button_Copy7" Content="Погашение долгов (не кредит)" Width="208"/>
+            <Label x:Name="button_Copy8" Content="Шоппинг" Width="208"/>
+            <Label x:Name="button_Copy9" Content="Путешествие" Width="208"/>
+            <Label x:Name="button_Copy10" Content="Торжество" Width="208"/>-->
+
+        </ListBox>
+        <ListView x:Name="listViewPayments" HorizontalAlignment="Left" Height="240" VerticalAlignment="Top" Width="183" Margin="541,121,0,0" AutomationProperties.IsColumnHeader="True">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+    </Grid>
+</Page>

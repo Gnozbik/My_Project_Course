@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ScoringModelContainer" CdmEntityContainer="ScoringEntities">
+    <EntitySetMapping Name="User_work">
+      <EntityTypeMapping TypeName="ScoringModel.User_work">
+        <MappingFragment StoreEntitySet="User_work">
+          <ScalarProperty Name="userW_prava" ColumnName="userW_prava" />
+          <ScalarProperty Name="id_userW" ColumnName="id_userW" />
+          <ScalarProperty Name="userW_name" ColumnName="userW_name" />
+          <ScalarProperty Name="userW_surname" ColumnName="userW_surname" />
+          <ScalarProperty Name="userW_login" ColumnName="userW_login" />
+          <ScalarProperty Name="userW_password" ColumnName="userW_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
