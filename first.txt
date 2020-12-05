@@ -1,0 +1,56 @@
+@startuml
+'наименование
+title Разраб мобильного приложения
+'направление диаграммы
+left to right direction
+'определение актеров
+actor "Гость" as a_gost
+actor "Авторизованный пользователь" as a_user
+actor "Зарегистрированный пользователь" as a_ZaregPol
+
+'определение вариантов использования
+rectangle Перроэлектросбыт {
+uc_reg as (Регистрация)
+uc_fio as (Ввод ФИО)
+uc_lsch as (Ввод ЛС)
+uc_pass as (Ввод пароля)
+uc_bank as (Ввод БК)
+uc_vibBank as (Выбор карты)
+
+a_gost --> uc_reg
+
+uc_reg ..> uc_fio:<<include>>
+uc_reg ..> uc_lsch:<<include>>
+uc_reg ..> uc_pass:<<include>>
+'uc_reg <.. uc_bank:<<extend>>
+
+uc_oplata as (Оплата услуг)
+uc_avto as (Авторизация)
+uc_Pass as (Пароль)
+uc_Log as (Логин)
+uc_IPU as (Ввод данных \n ИПУ)
+uc_zapros as (Запрос отчета)
+uc_period as (Ввод периода \n для отчета)
+uc_kvit as (Скачивание квитанции)
+uc_yes as (Подтверждение)
+
+a_user --> uc_avto
+uc_avto ..> uc_Log: <<include>>
+uc_avto ..> uc_Pass: <<include>>
+uc_Pass ..> uc_oplata: <<inckude>>
+uc_Log ..> uc_oplata: <<inclide>>
+uc_oplata ..> uc_vibBank: <<include>>
+uc_vibBank ..> uc_yes: <<include>>
+uc_oplata ..> uc_bank: <<include>>
+uc_bank..> uc_yes: <<include>>
+uc_yes ..> uc_kvit: <<include>>
+uc_oplata ..> uc_IPU: <<include>>
+uc_IPU ..> uc_zapros: <<include>>
+uc_IPU ..> uc_oplata: <<exit>>
+uc_zapros ..> uc_period: <<include>>
+
+
+
+
+}
+@enduml
