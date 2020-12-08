@@ -1,0 +1,16 @@
+﻿<Page x:Class="Laboratoria.Pages.Admins"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laboratoria.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Admins">
+
+    <Grid>
+        <Label x:Name="label" Content="Это Админка" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,148,0,0"/>
+        <Button x:Name="Bt_back" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="65,359,0,0" Click="Bt_back_Click"/>
+
+    </Grid>
+</Page>

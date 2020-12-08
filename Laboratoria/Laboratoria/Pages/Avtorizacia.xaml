@@ -1,0 +1,27 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Laboratoria.Pages"
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Class="Laboratoria.Pages.Avtorizacia"
+      mc:Ignorable="d" 
+      d:DesignHeight="421" d:DesignWidth="794"
+      Title="Avtorizacia">
+
+    <Grid Background="White" >
+
+        <Label x:Name="label1" Content="Авторизация" HorizontalAlignment="Center" Height="25" Margin="356,82,363,314"/>
+        <Label x:Name="label" Content="Логин:" Width="50" HorizontalAlignment="Center" Height="25" Margin="373,133,381,263"/>
+        <TextBox x:Name="Tb_login" Height="23" Width="100" TextWrapping="Wrap" HorizontalAlignment="Center"  Text="" Margin="344,161,350,237" />
+        <Label x:Name="label2" Content="Пароль:" Width="60" HorizontalAlignment="Center" Height="25" Margin="369,213,377,183"/>
+
+        <TextBox x:Name="pwdTextBox" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="100" Visibility="Visible" Margin="344,241,0,0"/>
+        <PasswordBox x:Name="pwdPasswordBox"  Height="23" Width="100" HorizontalAlignment="Center" Visibility="Visible" Margin="344,241,350,157"/>
+        <Button x:Name="Bt_vhod" Content="Войти" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="356,296,0,0" Click="Bt_vhod_Click"/>
+        <CheckBox x:Name="checkBox" Content="Показать пароль" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="461,245,0,0" Click="checkBox_Click"/>
+
+
+
+    </Grid>
+</Page>

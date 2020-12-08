@@ -1,0 +1,13 @@
+﻿<Window x:Class="Laboratoria.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Laboratoria"
+        mc:Ignorable="d"
+        Title="Медицинская Лаборатория №20" Height="450" Width="800" Background="#C0C0C0" Icon="logo.ico">
+    <Grid>
+        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Height="422" VerticalAlignment="Top" Width="795" NavigationUIVisibility="Hidden"/>
+
+    </Grid>
+</Window>
